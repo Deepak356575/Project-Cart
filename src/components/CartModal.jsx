@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CartModal = ({ cart, onClose, onRemoveFromCart }) => {
+const Cartmodal = ({ cart, onClose, onRemoveFromCart }) => {
   const totalCartValue = cart.reduce((total, item) => total + item.price, 0);
 
   return (
@@ -38,4 +38,4 @@ const CartModal = ({ cart, onClose, onRemoveFromCart }) => {
   );
 };
 
-export default CartModal;
+export default Cartmodal;
