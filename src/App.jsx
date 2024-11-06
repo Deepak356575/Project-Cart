@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
 import CartModal from './components/Cartmodal';
+
  
 function App() {
   const [products, setProducts] = useState([]);
@@ -40,10 +41,7 @@ function App() {
         cartItems={cart}
       />
       {isModalOpen && (
-        <CartModal
-        cart={cart}
-          onClose={closeModal}
-          onRemoveFromCart={removeFromCart}/>
+        <CartModal/>
       )}
     </div>
   );
