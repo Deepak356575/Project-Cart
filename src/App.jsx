@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
-import Cartmodal from './components/Cartmodal';
+import CartModal from './components/CartModal';
 
  
 function App() {
@@ -40,8 +40,14 @@ function App() {
         onAddToCart={addToCart} 
         cartItems={cart}
       />
+
       {isModalOpen && (
-        <Cartmodal/>      )}
+        <CartModal
+        cart={cart}
+          onClose={() => setIsModalOpen(false)}
+          onRemoveFromCart={removeFromCart}
+          />
+                   )}
     </div>
   );
 }
